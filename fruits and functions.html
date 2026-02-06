@@ -1,0 +1,168 @@
+<html>
+<head>
+    
+    <title>Array & Object Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0b1020, #1b1f3b, #2d1e4f);
+            color: #f5f7ff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #a78bfa;
+            text-shadow: 0 0 12px rgba(167, 139, 250, 0.8);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            padding: 25px;
+            margin-bottom: 35px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 14px;
+        }
+
+        li {
+            background: linear-gradient(135deg, #c084fc, #f472b6);
+            color: #1f1235;
+            padding: 12px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(192, 132, 252, 0.4);
+        }
+
+        li:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(244, 114, 182, 0.6);
+        }
+
+        .company-card {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: #e5e7eb;
+            padding: 18px;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border-left: 4px solid #a78bfa;
+            transition: all 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-6px);
+            border-left-color: #f472b6;
+            box-shadow: 0 15px 35px rgba(167, 139, 250, 0.6);
+        }
+
+        .company-card strong {
+            color: #c7d2fe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2> Using Array - 10 Fruits</h2>
+    <div class="box">
+        <ul id="fruitList"></ul>
+    </div>
+
+    <h2> Using Objects - 5 Companies</h2>
+    <div class="box" id="companyList"></div>
+
+    <script>
+        // Array Example - Fruits
+        const fruits = [
+            "Apple",
+            "Banana",
+            "Mango",
+            "Orange",
+            "Grapes",
+            "Pineapple",
+            "Papaya",
+            "Watermelon",
+            "Strawberry",
+            "Kiwi"
+        ];
+
+        const fruitList = document.getElementById("fruitList");
+
+        fruits.forEach(fruit => {
+            const li = document.createElement("li");
+            li.textContent = fruit;
+            fruitList.appendChild(li);
+        });
+
+        // Object Example - Companies
+        const companies = [
+            {
+                name: "Google",
+                founder: "Larry Page & Sergey Brin",
+                employees: "1,80,000+",
+                avgPackage: "₹30 LPA",
+                location: "USA"
+            },
+            {
+                name: "Infosys",
+                founder: "N. R. Narayana Murthy",
+                employees: "3,40,000+",
+                avgPackage: "₹7 LPA",
+                location: "India"
+            },
+            {
+                name: "Microsoft",
+                founder: "Bill Gates",
+                employees: "2,20,000+",
+                avgPackage: "₹28 LPA",
+                location: "USA"
+            },
+            {
+                name: "Amazon",
+                founder: "Jeff Bezos",
+                employees: "15,00,000+",
+                avgPackage: "₹25 LPA",
+                location: "USA"
+            },
+            {
+                name: "TCS",
+                founder: "J. R. D. Tata",
+                employees: "6,00,000+",
+                avgPackage: "₹6 LPA",
+                location: "India"
+            }
+        ];
+
+        const companyDiv = document.getElementById("companyList");
+
+        companies.forEach(company => {
+            companyDiv.innerHTML += `
+                <div class="company-card">
+                    <strong>Company:</strong> ${company.name}<br>
+                    <strong>Founder:</strong> ${company.founder}<br>
+                    <strong>Employees:</strong> ${company.employees}<br>
+                    <strong>Avg Package:</strong> ${company.avgPackage}<br>
+                    <strong>Location:</strong> ${company.location}
+                </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>
