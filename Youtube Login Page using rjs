@@ -1,0 +1,89 @@
+
+import './style.css'; 
+function YouTube() { 
+return ( 
+<div className="container"> 
+<div className="login-card"> 
+<h1>YouTube</h1> 
+<input type="text" placeholder="Your username" /> 
+<input type="password" placeholder="Password" /> 
+<div className="options"> 
+<label> 
+<input type="checkbox" /> Remember me 
+</label> 
+<span>Forgot Password?</span> 
+</div> 
+<button>Log In</button> 
+<p className="signup"> 
+Don’t have an account? <span>Sign Up</span> 
+</p> 
+</div> 
+</div> 
+); 
+} 
+export default YouTube; 
+Style Code: 
+body{ 
+margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+font-family: sans-serif; 
+} 
+.container { 
+height: 100vh; 
+background-image: url("./Youtube\ picture.jpg"); 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+background-size: cover;  
+background-position: center;  
+background-repeat: no-repeat; 
+} 
+.login-card{ 
+width: 350px; 
+padding: 30px; 
+background: rgba(255, 255, 255, 0.15); 
+backdrop-filter: blur(4px); 
+border-radius: 15px; 
+color: white; 
+text-align: center; 
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); 
+} 
+.login-card h1 { 
+margin-bottom: 25px; 
+} 
+.login-card input { 
+width: 100%; 
+padding: 12px; 
+margin-bottom: 15px; 
+border: none; 
+border-radius: 8px; 
+outline: none; 
+} 
+.options { 
+display: flex; 
+justify-content: space-between; 
+font-size: 12px; 
+margin-bottom: 20px; 
+} 
+.options span { 
+cursor: pointer;} 
+button { 
+width: 100%; 
+padding: 12px; 
+border: none; 
+border-radius: 10px; 
+background: white; 
+color: red; 
+font-weight: bold; 
+cursor: pointer; 
+} 
+.signup { 
+margin-top: 15px; 
+font-size: 13px; 
+} 
+.signup span { 
+color: #fff; 
+font-weight: bold; 
+cursor: pointer; 
+}
