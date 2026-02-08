@@ -1,0 +1,30 @@
+import React from 'react'; 
+import"./style.css" 
+export default function Head (){ 
+ 
+  return<div> 
+     <h1>Employee Details</h1> 
+     <p>---------------</p> 
+     <h4>Employee Id: 134</h4> 
+    <h4>Employee Name: POOJA</h4> 
+    <h4>Employee Company: xyz</h4> 
+    <h4>Employee Salary: 4674567</h4> 
+    <h4>Employee Location: Bengaluru</h4>  
+   <h4>Employee Phone: 456789987</h4>  
+    </div> 
+}; 
+// export default Head; 
+ 
+ 
+Style Code: 
+h1{ 
+    color: rosybrown; 
+    font-size: 2rem; 
+} 
+body{ 
+    text-align: center; 
+    background-color: cornsilk; 
+} 
+h4{ 
+    color: indianred 
+} 
